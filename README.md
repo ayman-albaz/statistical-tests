@@ -10,10 +10,10 @@ Statistical tests is a Nim library for performing statistical tests.
 | Chi2 Test               | chi2_test(observed_values: seq[SomeNumber], expected_values: seq[SomeNumber], confidence_interval_alpha: float = 0.05) |
 | Chi2 Contingency Test   | chi2_contingency_test(observed_values: seq[seq[SomeNumber]]                                                            |
 | F Test                  | F_test(x1, x2: seq[SomeNumber], confidence_interval_alpha: float = 0.05)                                               |
-| One sample t-test       | one_sample_t_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                                 |
+| One sample t-test       | one_sample_t_test(x: seq[SomeNumber], expected_mean: float = 0.0, confidence_interval_alpha: float = 0.05)             |
 | Equal variance t-test   | equal_variance_t_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                             |
 | Unequal variance t-test | unequal_variance_t_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                           |
-| One sample z-test       | one_sample_z_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                                 |
+| One sample z-test       | one_sample_z_test(x: seq[SomeNumber], expected_mean: float = 0.0, confidence_interval_alpha: float = 0.05)             |
 | Equal variance z-test   | equal_variance_z_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                             |
 | Unequal variance z-test | unequal_variance_z_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                           |
 
