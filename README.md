@@ -6,28 +6,28 @@ Statistical tests is a Nim library for performing statistical tests.
 ## Supported Statistical Tests
 | Statistical Test  | Command                                                                                                                      |
 |-------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Binomial Test           | binomial_test(x, n: int, p:float, confidence_interval_alpha: float = 0.05)                                             |
-| Chi2 Test               | chi2_test(observed_values: seq[SomeNumber], expected_values: seq[SomeNumber], confidence_interval_alpha: float = 0.05) |
-| Chi2 Contingency Test   | chi2_contingency_test(observed_values: seq[seq[SomeNumber]]                                                            |
-| F Test                  | F_test(x1, x2: seq[SomeNumber], confidence_interval_alpha: float = 0.05)                                               |
-| One sample t-test       | one_sample_t_test(x: seq[SomeNumber], expected_mean: float = 0.0, confidence_interval_alpha: float = 0.05)             |
-| Equal variance t-test   | equal_variance_t_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                             |
-| Unequal variance t-test | unequal_variance_t_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                           |
-| One sample z-test       | one_sample_z_test(x: seq[SomeNumber], expected_mean: float = 0.0, confidence_interval_alpha: float = 0.05)             |
-| Equal variance z-test   | equal_variance_z_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                             |
-| Unequal variance z-test | unequal_variance_z_test(x1, x2: seq[SomeNumber], expected_mean: float = 0.0)                                           |
+| Binomial Test           | `binomialTest(x, n: int, p:float, confidenceIntervalAlpha: float = 0.05)`                                             |
+| Chi2 Test               | `chi2Test(observedValues: seq[SomeNumber], expectedValues: seq[SomeNumber], confidenceIntervalAlpha: float = 0.05)` |
+| Chi2 Contingency Test   | `chi2ContingencyTest(observedValues: seq[seq[SomeNumber]])`                                                            |
+| F Test                  | `fTest(x1, x2: seq[SomeNumber], confidenceIntervalAlpha: float = 0.05)`                                               |
+| One sample t-test       | `oneSampleTTest(x: seq[SomeNumber], expectedMean: float = 0.0, confidenceIntervalAlpha: float = 0.05)`             |
+| Equal variance t-test   | `equalVarianceTTest(x1, x2: seq[SomeNumber], expectedMean: float = 0.0)`                                             |
+| Unequal variance t-test | `unequalVarianceTTest(x1, x2: seq[SomeNumber], expectedMean: float = 0.0)`                                           |
+| One sample z-test       | `oneSampleZTest(x: seq[SomeNumber], expectedMean: float = 0.0, confidenceIntervalAlpha: float = 0.05)`             |
+| Equal variance z-test   | `equalVarianceZTest(x1, x2: seq[SomeNumber], expectedMean: float = 0.0)`                                             |
+| Unequal variance z-test | `unequalVarianceZTest(x1, x2: seq[SomeNumber], expectedMean: float = 0.0)`                                           |
 
 
 ## Example
 ```Nim
-let stats = one_sample_z_test([1, 2, 3, 4, 5, 6])
-echo stats.number_observations
-echo stats.observed_mean
-echo stats.expected_mean
-echo stats.standard_error
-echo stats.z_statistic
-echo stats.p_value
-echo stats.confidence_interval
+let stats = oneSampleZTest([1, 2, 3, 4, 5, 6])
+echo stats.numberObservations
+echo stats.observedMean
+echo stats.expectedMean
+echo stats.standardError
+echo stats.zStatistic
+echo stats.pValue
+echo stats.confidenceInterval
 ```
 
 ## Accuracy

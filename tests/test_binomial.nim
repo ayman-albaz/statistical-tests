@@ -1,23 +1,22 @@
-import math
-import sequtils
-import times
-import unittest
+import std/[math, times, unittest]
 
-import statistical_tests/binomial
+import statistical_tests
 
 
 suite "BinomialTests":
-    
-    setup:
-        let t0 = getTime()
+  
+  setup:
+    let t0 = getTime()
 
-    teardown:
-        echo "\n  RUNTIME: ", getTime() - t0
+  teardown:
+    echo "\n  RUNTIME: ", getTime() - t0
 
-    test "binomial_test":
-        let summary = BinomialTestSummary(number_successes: 4,
-                                          number_observations: 20,
-                                          proportion: 0.2,
-                                          p_value: 0.10190390638834.round(14),
-                                          confidence_interval: (0.05733399705003.round(14), 0.43661400299667.round(14)))
-        check binomial_test(4, 20, 0.4) == summary
+  test "binomialTest":
+    let summary = BinomialTestSummary(
+      numberSuccesses: 4,
+      numberObservations: 20,
+      proportion: 0.2,
+      pValue: 0.10190390638834.round(14),
+      confidenceInterval: (0.05733399705003.round(14), 0.43661400299667.round(14))
+    )
+    check binomialTest(4, 20, 0.4) == summary
